@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Change Background Color</title>
+		<style>
+			/* Style for centering the content */
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+				font-family: Arial, sans-serif;
+			}
+			h1 {
+				margin-bottom: 20px;
+			}
+			button {
+				padding: 10px 20px;
+				font-size: 16px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Click the Button to Change Background Color</h1>
+		<button onclick="changeBackgroundColor()">Change Background Color</button>
+		<script>
+			function changeBackgroundColor() {
+				document.body.style.transition = "background-color 0.5s";
+				if (document.body.style.backgroundColor === "rgb(0, 123, 255)") {
+					document.body.style.backgroundColor = "white";
+					document.querySelector("h1").style.color = "black";
+				} else {
+					document.body.style.backgroundColor = "#007BFF";
+					document.querySelector("h1").style.color = "white";
+				}
+			}
+		</script>
+	</body>
+</html>
